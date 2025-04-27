@@ -65,7 +65,7 @@ label {
   display: inline-block;
   font-size: 12px;
   margin: 4px 2px;
-  margin-left: 100px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
