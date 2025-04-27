@@ -138,4 +138,43 @@ class Books extends BaseController
 
     }
 
+
+    public function delete($id){
+        helper('form');
+
+        $model = model(BooksModel::class);
+
+        $book = $model->find($id);
+
+        if(!$book){
+            throw new PageNotFoundException('Book not found: ' . $id);
+        }
+
+        return view('books/delete',[
+            'book'=>$book,
+        ]);
+    }
+
+    public function confirm($id){
+
+        helper('form');
+
+        //import model data
+        $model = model(BooksModel::class);
+
+        //find book you want to edit data
+        $book = $model->find($id);
+
+        if(!$book){
+            throw new PageNotFoundException('Book not found: ' . $id);
+        }
+
+        $model->delete($id);
+
+        //redirects to library page with sucess message
+    return redirect()
+    ->to('/library')
+    ->with('success', 'Book deleted successfully!');
+    }
+
 }

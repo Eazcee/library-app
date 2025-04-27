@@ -44,8 +44,7 @@
   width: 200px;
 }
 
-/*styles the typing box*/
-input[type="text"] {
+input[type="text"] {/*styles the input boxes*/
     width: 193px;
 }
 
@@ -67,7 +66,7 @@ label {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12x;
+  font-size: 12px;
   margin: 4px 2px;
   margin-left: 100px;
   cursor: pointer;

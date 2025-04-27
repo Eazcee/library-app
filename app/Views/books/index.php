@@ -38,7 +38,9 @@
                 <td><?= esc($book_item['author']) ?></td>
                 <td><?= esc($book_item['genre']) ?></td>
                 <td><?= esc($book_item['publication_year']) ?></td>
-                <td><a href="/library/edit/<?= esc($book_item['id']) ?>"><button class="edit-button">Edit</button></a></td>
+                <td><a href="/library/edit/<?= esc($book_item['id']) ?>"><button class="edit-button">Edit</button></a>
+                <a href="/library/delete/<?= esc($book_item['id']) ?>"><button class="edit-button">Delete</button></a>    
+                </td>
             </tr>
             <?php endforeach ?>
 
